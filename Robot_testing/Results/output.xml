@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot rpa="false" generated="20190721 13:26:49.195" generator="Robot 3.1.2 (Python 2.7.15+ on linux2)">
+<suite source="/home/francisco/Desktop/Testing_Intro/Robot_testing/Tests/project.robot" id="s1" name="Project">
+<test id="s1-t1" name="User can open home page">
+<kw name="Open Browser" library="Selenium2Library">
+<doc>Opens a new browser instance to the given ``url``.</doc>
+<arguments>
+<arg>http://www.airbnb.pt</arg>
+<arg>firefox</arg>
+</arguments>
+<msg timestamp="20190721 13:26:49.808" level="INFO">Opening browser 'firefox' to base url 'http://www.airbnb.pt'.</msg>
+<status status="PASS" endtime="20190721 13:27:14.010" starttime="20190721 13:26:49.808"></status>
+</kw>
+<kw name="Wait Until Page Contains" library="Selenium2Library">
+<doc>Waits until ``text`` appears on current page.</doc>
+<arguments>
+<arg>Reserve</arg>
+</arguments>
+<status status="PASS" endtime="20190721 13:27:14.396" starttime="20190721 13:27:14.011"></status>
+</kw>
+<kw name="Close Browser" library="Selenium2Library">
+<doc>Closes the current browser.</doc>
+<status status="PASS" endtime="20190721 13:27:22.435" starttime="20190721 13:27:14.397"></status>
+</kw>
+<doc>As a user I ...</doc>
+<status status="PASS" endtime="20190721 13:27:22.435" critical="yes" starttime="20190721 13:26:49.805"></status>
+</test>
+<test id="s1-t2" name="User can open test page from rest api">
+<kw name="Open Browser" library="Selenium2Library">
+<doc>Opens a new browser instance to the given ``url``.</doc>
+<arguments>
+<arg>http://localhost:4000/greeting</arg>
+<arg>firefox</arg>
+</arguments>
+<msg timestamp="20190721 13:27:22.439" level="INFO">Opening browser 'firefox' to base url 'http://localhost:4000/greeting'.</msg>
+<status status="PASS" endtime="20190721 13:27:33.779" starttime="20190721 13:27:22.439"></status>
+</kw>
+<kw name="Wait Until Page Contains" library="Selenium2Library">
+<doc>Waits until ``text`` appears on current page.</doc>
+<arguments>
+<arg>Hello</arg>
+</arguments>
+<status status="PASS" endtime="20190721 13:27:34.109" starttime="20190721 13:27:33.791"></status>
+</kw>
+<kw name="Close Browser" library="Selenium2Library">
+<doc>Closes the current browser.</doc>
+<status status="PASS" endtime="20190721 13:27:36.610" starttime="20190721 13:27:34.109"></status>
+</kw>
+<doc>As a user I ...</doc>
+<status status="PASS" endtime="20190721 13:27:36.610" critical="yes" starttime="20190721 13:27:22.437"></status>
+</test>
+<test id="s1-t3" name="User can open personalized test page from rest api">
+<kw name="Open Browser" library="Selenium2Library">
+<doc>Opens a new browser instance to the given ``url``.</doc>
+<arguments>
+<arg>http://localhost:4000/greeting?name=John</arg>
+<arg>firefox</arg>
+</arguments>
+<msg timestamp="20190721 13:27:36.613" level="INFO">Opening browser 'firefox' to base url 'http://localhost:4000/greeting?name=John'.</msg>
+<status status="PASS" endtime="20190721 13:27:48.039" starttime="20190721 13:27:36.613"></status>
+</kw>
+<kw name="Wait Until Page Contains" library="Selenium2Library">
+<doc>Waits until ``text`` appears on current page.</doc>
+<arguments>
+<arg>John</arg>
+</arguments>
+<status status="PASS" endtime="20190721 13:27:48.139" starttime="20190721 13:27:48.040"></status>
+</kw>
+<kw name="Close Browser" library="Selenium2Library">
+<doc>Closes the current browser.</doc>
+<status status="PASS" endtime="20190721 13:27:51.089" starttime="20190721 13:27:48.140"></status>
+</kw>
+<doc>As a user I ...</doc>
+<status status="PASS" endtime="20190721 13:27:51.090" critical="yes" starttime="20190721 13:27:36.611"></status>
+</test>
+<doc>This is a basic test</doc>
+<status status="PASS" endtime="20190721 13:27:51.094" starttime="20190721 13:26:49.198"></status>
+</suite>
+<statistics>
+<total>
+<stat fail="0" pass="3">Critical Tests</stat>
+<stat fail="0" pass="3">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat fail="0" id="s1" name="Project" pass="3">Project</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
